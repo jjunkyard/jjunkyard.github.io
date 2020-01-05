@@ -1,72 +1,37 @@
 ---
 layout: page
-title: My website
-subtitle: This is where I will tell my friends way too much about me
+title: Jjunkyard
+subtitle: Tatooine Droids Reloaded <span>:stars::rocket::robot:</span>
 use-site-title: true
 ---
 
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | relative_url }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
+<h2 style="text-align:center;">We are a diverse team of tinkerers, engineers 
+and hobbyists trying to tackle the problems and challenges associated 
+with collaborative robotic systems in space.</h2>
 
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: site.date_format }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
-
-   </article>
-  {% endfor %}
-</div>
-
-{% if paginator.total_pages > 1 %}
+<h3 style="text-align:center;">Currently, our team is competing 
+in the NASA Space Robotics Challenge Phase II which focuses on finding 
+solutions to allow a heterogeneous, multi-robot team to autonomously 
+complete tasks envisioned for a lunar in-situ resource utilization 
+(ISRU) mission.</h3>
+&nbsp;
 <ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
+    <li>
+        <a href="http://www.spaceroboticschallenge.com">NASA SRC II</a>
+    </li>
 </ul>
-{% endif %}
+&nbsp;
+<h4 style="text-align:center;">For updates regarding our team's progress
+and work, have a peek at our blog. Visit our GitHub page for our 
+open-source projects, we are always looking for collaborator, 
+and new pull requests are more than welcome.</h4>
+&nbsp;
+<ul class="pager main-pager">
+    <li>
+        <a href="http://jjunkyard.com/blog">Our Blog</a>
+    </li>
+    <li>
+        <a href="https://github.com/jjunkyard">GitHub</a>
+    </li>
+</ul>
+&nbsp;
